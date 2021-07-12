@@ -1,0 +1,10 @@
+var a=[{id:0,value:'a'},{id:1,value:'b'},{id:0,value:'b'}]
+console.log(a.filter((v)=>fun(v['id'])==1))
+function fun(j){
+    var c=0;
+     for(const i of a){
+         if(j==i['id'])
+            c=c+1
+     }
+     return c;
+}
