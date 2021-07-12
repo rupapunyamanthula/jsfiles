@@ -1,4 +1,4 @@
 a=[1,2,3,[4],5]
-console.log(a.flat())
+console.log(a.reduce((a1,i)=>a1.concat(i),[]))
 b=[1,2,[3,4,[5]],6]
-console.log(b.flat())
+console.log(b.reduce((a1,i)=>a1.concat(i),[]))
