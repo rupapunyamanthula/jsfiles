@@ -1,0 +1,15 @@
+a=[{personA: 'A', garbage: 'asldkfj'},
+    {personB: 'B', garbage: 'asldkfj'},
+    {personC: 'C', garbage: 'asldkfj'},
+    {personD: 'D', garbage: 'asldkfj'},
+    {personE: 'E', garbage: 'asldkfj'},
+    {personF: 'F', garbage: 'asldkfj'},
+    {personG: 'G', garbage: 'asldkfj'}]
+s=a.reduce(function(a1,v,j){
+    x=Object.keys(v)[0]
+    a1[x]=v[x]
+    return a1
+},{})
+console.log(s)
+
+
