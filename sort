@@ -1,0 +1,21 @@
+a=[3,2,1,9,8,3]
+n=a.length
+s=a.reduce(function(a1,v,i){
+  s1=fun(a1,v)
+  if(s1==-1){
+    a1.splice(n,0,v)
+  }
+  else{
+    a1.splice(s1,0,v)
+  }
+  return a1
+  
+},[])
+console.log(s)
+function fun(a1,v){
+    for(var i in a1){
+        if(v<a1[i])
+         return i
+    }
+    return -1
+}
