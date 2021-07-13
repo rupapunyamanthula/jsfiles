@@ -6,14 +6,13 @@ a=[{garbage: 'asldkfj', personA: 'A'},
 {personF: 'F', garbage: 'asldkfj'},
 {personG: 'G', garbage: 'asldkfj'}]
 s=a.reduce(function(a1,v,j){
-    x=Object.keys(v)
-    x1=fun(x,v)
+    x1=fun(v)
     a1[x1]=v[x1]
     return a1
 },{})
 console.log(s)
-function fun(x,v){
-    for(i of x){
+function fun(v){
+    for(i in v){
         if(v[i].length==1){
             return i
         }
