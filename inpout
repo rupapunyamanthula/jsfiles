@@ -1,15 +1,23 @@
-a=[{personA: 'A', garbage: 'asldkfj'},
-    {personB: 'B', garbage: 'asldkfj'},
-    {personC: 'C', garbage: 'asldkfj'},
-    {personD: 'D', garbage: 'asldkfj'},
-    {personE: 'E', garbage: 'asldkfj'},
-    {personF: 'F', garbage: 'asldkfj'},
-    {personG: 'G', garbage: 'asldkfj'}]
+a=[{garbage: 'asldkfj', personA: 'A'},
+{personB: 'B', garbage: 'asldkfj'},
+{personC: 'C', garbage: 'asldkfj'},
+{personD: 'D', garbage: 'asldkfj'},
+{personE: 'E', garbage: 'asldkfj'},
+{personF: 'F', garbage: 'asldkfj'},
+{personG: 'G', garbage: 'asldkfj'}]
 s=a.reduce(function(a1,v,j){
-    x=Object.keys(v)[0]
-    a1[x]=v[x]
+    x=Object.keys(v)
+    x1=fun(x,v)
+    a1[x1]=v[x1]
     return a1
 },{})
 console.log(s)
+function fun(x,v){
+    for(i of x){
+        if(v[i].length==1){
+            return i
+        }
+        }
+    }
 
 
